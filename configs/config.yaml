@@ -1,0 +1,21 @@
+# config.yaml
+# logger level, kafka pub and sub parameters
+
+logger:
+  level: debug
+
+kafka:
+  sub:
+    server: "127.0.0.1:9093"
+    topic: "task-mail"
+    group_id: "team9-consumer-group"
+
+  pub:
+    server: "127.0.0.1:9093"
+    topic: "mail-analytics"
+
+mail:
+  rate: 5  # rate limit in seconds on sending emails
+
+compose:
+  workers: 2 # number of workers for composing smtp-messages simultaneously
