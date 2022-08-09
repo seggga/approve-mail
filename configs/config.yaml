@@ -8,7 +8,7 @@ kafka:
   sub:
     server: "127.0.0.1:9093"
     topic: "task-mail"
-    group_id: "team9-consumer-group"
+    group_id: "task-mail-group"
 
   pub:
     server: "127.0.0.1:9093"
