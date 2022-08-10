@@ -15,13 +15,13 @@ logger:
 
 kafka:
   sub:
-    server: "91.185.95.87:9094"
-    topic: "team9-task-mail"
-    group_id: "team9-consumer-group"
+    server: "127.0.0.1:9093"
+    topic: "task-mail"
+    group_id: "consumer-group"
 
   pub:
-    server: "91.185.95.87:9094"
-    topic: "team9-mail-analytics"
+    server: "127.0.0.1:9093"
+    topic: "mail-analytics"
 
 mail:
   rate: 5  # rate limit in seconds on sending emails
@@ -36,13 +36,13 @@ compose:
 		},
 		Kafka: Kafka{
 			Sub: KafkaSub{
-				Server:  "91.185.95.87:9094",
-				Topic:   "team9-task-mail",
-				GroupID: "team9-consumer-group",
+				Server:  "127.0.0.1:9093",
+				Topic:   "task-mail",
+				GroupID: "consumer-group",
 			},
 			Pub: KafkaPub{
-				Server: "91.185.95.87:9094",
-				Topic:  "team9-mail-analytics",
+				Server: "127.0.0.1:9093",
+				Topic:  "mail-analytics",
 			},
 		},
 		Mail: Mail{
